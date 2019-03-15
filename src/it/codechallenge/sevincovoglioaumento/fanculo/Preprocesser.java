@@ -7,15 +7,12 @@ import it.codechallenge.sevincovoglioaumento.datamodel.OutputPreprocess;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputRead;
 
 public class Preprocesser {
-	public static List<OutputPreprocess> preprocessPhase(List<OutputRead> parsed){
+	public static List<OutputPreprocess> preprocessPhase(OutputRead parsed){
 		long start = System.currentTimeMillis();
 		
 		
 		List<OutputPreprocess> toRet = new ArrayList<>();
-		
-		for(OutputRead item : parsed) {
-			//TODO: COMPLETE HERE
-		}
+
 		
 		
 		long finish = System.currentTimeMillis();

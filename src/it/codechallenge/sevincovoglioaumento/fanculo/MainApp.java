@@ -8,7 +8,7 @@ import it.codechallenge.sevincovoglioaumento.datamodel.OutputRead;
 
 public class MainApp {
 
-	private final static String inputPath = "./input/fakeInput.txt";
+	private final static String inputPath = "./input/1_victoria_lake.txt";
 	private final static String outputPath = "./output/fakeOutput.txt";
 	
 	public static void main(String[] args) throws Exception {

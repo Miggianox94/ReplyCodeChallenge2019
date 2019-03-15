@@ -6,11 +6,6 @@ public class CustomerOffice {
 	int reward;
 	
 
-	public CustomerOffice(Node node, int reward) {
-		super();
-		this.node = node;
-		this.reward = reward;
-	}
 	public Node getNode() {
 		return node;
 	}

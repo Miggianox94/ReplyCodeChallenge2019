@@ -1,13 +1,13 @@
 package it.codechallenge.sevincovoglioaumento.datamodel;
 
 public class Node {
-	private int terrainCost;
+	private int terrainCost; //sarà 0 se sono headquarter
 	private int column;
 	private int row;
 	
 	
 	
-	public Node(int terrainCost, int column, int row) {
+	public Node(Integer terrainCost, int column, int row) {
 		super();
 		this.terrainCost = terrainCost;
 		this.column = column;
