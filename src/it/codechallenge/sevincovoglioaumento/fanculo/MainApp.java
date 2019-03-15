@@ -13,7 +13,7 @@ public class MainApp {
 	
 	public static void main(String[] args) throws Exception {
 		
-		List<OutputRead> parsed = Reader.readFile(inputPath);
+		OutputRead parsed = Reader.readFile(inputPath);
 
 		System.out.println("########### READ PHASE FINISHED #############");
 		

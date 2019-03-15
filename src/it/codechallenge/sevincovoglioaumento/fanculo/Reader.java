@@ -2,7 +2,6 @@ package it.codechallenge.sevincovoglioaumento.fanculo;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -10,14 +9,30 @@ import org.apache.commons.io.FileUtils;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputRead;
 
 public class Reader {
-	public static List<OutputRead> readFile(String inputPath) throws IOException{
+	public static OutputRead readFile(String inputPath) throws IOException{
 		long start = System.currentTimeMillis();
 		
-		List<OutputRead> toReturn = new ArrayList<>();
+		OutputRead toReturn = new OutputRead();
 		File file = new File(inputPath);
 		List<String> lines = FileUtils.readLines(file, "UTF-8");
 		
-		//TODO: COMPLETE HERE
+		boolean firstLineOk = false;
+		int counter = 1;
+		for(String line : lines) {
+			if(!firstLineOk) {
+				String[] splitted = line.split(" ");
+				toReturn.setWidth(Integer.parseInt(splitted[0]));
+				toReturn.setHeight(Integer.parseInt(splitted[1]));
+				toReturn.setNumberCustomer(Integer.parseInt(splitted[2]));
+				toReturn.setMaxNumberReplyOffices(Integer.parseInt(splitted[3]));
+			}
+			else {
+				
+				counter++;
+			}
+		}
+		
+
 		
 		
 		
