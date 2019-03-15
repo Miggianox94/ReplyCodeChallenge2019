@@ -7,10 +7,10 @@ import it.codechallenge.sevincovoglioaumento.datamodel.OutputCalculating;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputPreprocess;
 
 public class Calculator {
-	public static List<OutputCalculating> calulatingPhase(List<OutputPreprocess> preprocessed){
+	public static OutputCalculating calulatingPhase(List<OutputPreprocess> preprocessed){
 		long start = System.currentTimeMillis();
 		
-		List<OutputCalculating> toRet = new ArrayList<>();
+		OutputCalculating toRet = new OutputCalculating();
 		
 		for(OutputPreprocess item : preprocessed) {
 			//TODO: COMPLETE HERE

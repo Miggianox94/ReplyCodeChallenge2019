@@ -5,6 +5,7 @@ import java.util.List;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputCalculating;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputPreprocess;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputRead;
+import it.codechallenge.sevincovoglioaumento.datamodel.RigaOutput;
 
 public class MainApp {
 
@@ -21,10 +22,10 @@ public class MainApp {
 		
 		System.out.println("########### PREPROCESS PHASE FINISHED #############");
 		
-		List<OutputCalculating> calculated = Calculator.calulatingPhase(preprocessed);
+		OutputCalculating calculated = Calculator.calulatingPhase(preprocessed);
 		
 		System.out.println("########### CALCULATING PHASE FINISHED #############");
-		
+
 		Writer.writeFile(calculated,outputPath);
 		
 		System.out.println("########### WRITE PHASE FINISHED #############");

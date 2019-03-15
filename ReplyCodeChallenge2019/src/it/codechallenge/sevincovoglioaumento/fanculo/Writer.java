@@ -7,7 +7,7 @@ import java.util.List;
 import it.codechallenge.sevincovoglioaumento.datamodel.OutputCalculating;
 
 public class Writer {
-	public static void writeFile(List<OutputCalculating> calculated, String outputPath) {
+	public static void writeFile(OutputCalculating calculated, String outputPath) {
 		long start = System.currentTimeMillis();
 		
 		
@@ -15,8 +15,10 @@ public class Writer {
 		try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath)))
 		{
 
-			//TODO: COMPLETE HERE
-			//writer.write(<something>+"\n");
+			writer.write(calculated.toString());
+			writer.flush();
+			
+			writer.close();
 		
 		}
 		catch(Exception ex)
@@ -24,7 +26,6 @@ public class Writer {
 			System.out.println("Scoppiato in scrittura: " + ex.getMessage());
 			ex.printStackTrace();
 		}
-		
 		
 		
 		
