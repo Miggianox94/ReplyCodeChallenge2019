@@ -17,7 +17,7 @@ public class MainApp {
 
 		System.out.println("########### READ PHASE FINISHED #############");
 		
-		List<OutputPreprocess> preprocessed = Preprocesser.preprocessPhase(parsed);
+		OutputPreprocess preprocessed = Preprocesser.preprocessPhase(parsed);
 		
 		System.out.println("########### PREPROCESS PHASE FINISHED #############");
 		
