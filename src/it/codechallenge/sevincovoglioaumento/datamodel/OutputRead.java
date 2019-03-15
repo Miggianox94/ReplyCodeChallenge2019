@@ -13,7 +13,6 @@ public class OutputRead {
 	private Node[][] nodes;
 
 	
-
 	public int getWidth() {
 		return width;
 	}
