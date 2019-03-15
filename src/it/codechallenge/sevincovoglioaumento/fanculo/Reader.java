@@ -84,7 +84,11 @@ public class Reader {
 		}
 		
 
-		
+		for(Node[] node : toReturn.getNodes()) {
+			for(Node curr : node) {
+				curr.nodes = toReturn.getNodes();
+			}
+		}
 		
 		
 		long finish = System.currentTimeMillis();

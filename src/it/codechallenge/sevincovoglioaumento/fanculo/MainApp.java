@@ -9,7 +9,7 @@ import it.codechallenge.sevincovoglioaumento.datamodel.OutputRead;
 public class MainApp {
 
 	private final static String inputPath = "./input/1_victoria_lake.txt";
-	private final static String outputPath = "./output/fakeOutput.txt";
+	private final static String outputPath = "./output/1.txt";
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -17,11 +17,13 @@ public class MainApp {
 
 		System.out.println("########### READ PHASE FINISHED #############");
 		
-		OutputPreprocess preprocessed = Preprocesser.preprocessPhase(parsed);
+		//List<OutputPreprocess> preprocessed = Preprocesser.preprocessPhase(parsed);
 		
 		System.out.println("########### PREPROCESS PHASE FINISHED #############");
 		
-		List<OutputCalculating> calculated = Calculator.calulatingPhase(preprocessed);
+		//OutputCalculating calculated = Calculator.calulatingPhase(preprocessed,parsed);
+		
+		OutputCalculating calculated = Calculator.calulatingPhase2(parsed);
 		
 		System.out.println("########### CALCULATING PHASE FINISHED #############");
 		
